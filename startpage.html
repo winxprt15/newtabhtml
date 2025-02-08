@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chrome Start Page</title>
+<meta charset="UTF-8"/>
+<style>
+@keyframes Op01 {
+from {opacity: 0;}
+to {opacity: 1}
+}
+body {
+animation: Op01 1.2s;
+}
+body {
+background: linear-gradient(90deg, rgb(65, 65, 65), rgb(0, 255, 85));
+color: lime;
+font-family: Bahnschrift, Verdana, Tahoma;
+}
+h2 {
+opacity: 1;
+font-size: 22pt;
+font-weight: 250;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 0;
+animation: MovOverlineH2 2s;
+}
+h2::selection {
+background-color: lime;
+color: darkblue;
+}
+.moving-shapes {
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+height: 100px;
+margin: 5px;
+margin-top: 10px;
+padding: 5px;
+z-index: -1;
+}
+@keyframes MovOverlineDIV {
+0% {
+opacity: 0;
+}
+20% {
+opacity: 0;
+height: 0px;
+width: 40%;
+margin-top: 40px;
+}
+20% {}
+50% {
+height: 5px;
+}
+100% {
+margin-top: 0;
+}
+}
+@keyframes MovOverlineDIV2 {
+0% {
+opacity: 0;
+}
+20% {
+opacity: 0;
+height: 0px;
+width: 50%;
+margin-top: 600px;
+}
+50% {
+height: 5px;
+}
+100% {
+margin-top: 75px;
+}
+}
+@keyframes MovOverlineH2 {
+0% {opacity: 0;}
+25% {opacity: 0;}
+100% {opacity: 1;}
+}
+.moving-overline {
+height: 5px;
+width: 45%;
+background-color: limegreen;
+transform: skew(245deg, 180deg);
+animation: MovOverlineDIV 2s ease-in-out;
+}
+.moving-overline2 {
+margin-top: 75px;
+height: 5px;
+width: 95%;
+background-color: limegreen;
+transform: skew(245deg, 180deg);
+animation: MovOverlineDIV2 2s ease-in-out;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin-left: -10px;
+}
+fieldset {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin-top: 80px;
+border-color: lime;
+border-radius: 25px;
+margin-bottom: 5%;
+user-select: none;
+height: 350px;
+}
+legend {
+background-color: limegreen;
+color: darkblue;
+border-radius: 25%;
+transform: scale(150%);
+margin-left: 25%;
+animation: LegendAnim 2s ease-in-out;
+}
+.input1, .input9 {
+background-color: transparent;
+border-radius: 5%;
+border: none;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: green;
+transition: border-bottom-color 0.5s;
+transform: scale(135%);
+margin-top: 15px;
+color: limegreen;
+font-family: Verdana;
+font-weight: 350;
+outline: 0;
+height: 15px;
+}
+.input1::selection, .input9::selection {
+background-color: lime;
+color: darkblue;
+}
+.input1:hover, .input9:hover {
+border-bottom-color: limegreen;
+color: lime;
+}
+.input1:active, .input9:active {
+border-bottom-color: rgba(101, 255, 101, 0.767);
+color: rgba(101, 255, 101, 0.767);
+}
+.input1::placeholder, .input9::placeholder {
+color: rgb(55, 165, 77);
+}
+.input2, .input3, .input4, .input5, .input6, .input7, .input8 {
+margin-top: 15px;
+transform: scale(150%);
+margin-left: 15px;
+margin-right: 15px;
+background-color: transparent;
+border: none;
+outline: 0;
+color: green;
+border-bottom-color: green;
+border-bottom-width: 0.2px;
+border-bottom-style: solid;
+height: 16px;
+transition: border-bottom-color, color 1s;
+cursor: pointer;
+text-align: center;
+}
+.input2:hover, .input3:hover, .input4:hover, .input5:hover, .input6:hover, .input7:hover, .input8:hover {
+border-bottom-color: limegreen;
+color: lime;
+}
+.input2:active, .input3:active, .input4:active, .input5:active, .input6:active, .input7:active, .input8:active {
+border-bottom-color: rgba(101, 255, 101, 0.767);
+}
+.input-area {
+position: absolute;
+top: 40%;
+bottom: 0;
+right: 20;
+left: 20%;
+transform: scale(120%);
+width: 60%;
+height: 40%;
+}
+.fieldset2 {
+position: absolute;
+top: 350px;
+bottom: 600px;
+right: 0;
+left: 0;
+height: 200px;
+}
+.input4, .input5, .input6 {
+margin-left: 15px;
+margin-right: 15px;
+}
+.input4 {
+width: 65px;
+}
+.input5 {
+width: 70px;
+}
+.input6 {
+width: 50px;
+}
+.input1 {
+width: 45%;
+}
+.input9 {
+width: 45%;
+}
+.input9:hover::placeholder, .input1:hover::placeholder {
+color: limegreen;
+}
+@keyframes LegendAnim {
+from {margin-left: -250px;}
+to {margin-left: 25%;}
+}
+</style>
+</head>
+<body>
+<div class="moving-divs">
+<center>
+<div class="moving-overline"></div>
+</center>
+</div>
+<center>
+<h2>Welcome!</h2>
+</center>
+<div class="moving-divs2">
+<center>
+<div class="moving-overline2"></div>
+</center>
+<fieldset>
+<legend>Search</legend>
+<div class="input-area">
+<center>
+<input type="search" autocomplete="on" name="query" placeholder="Type something to search and pick a search engine" class="input1"/>
+<br/>
+<input type="button" class="input2" value="Google"/>
+<input type="button" class="input3" value="Bing">
+</center>
+</div>
+</fieldset>
+</div>
+<div>
+<fieldset class="fieldset2">
+<legend>Visit Sites</legend>
+<center>
+<button onclick="window.location.href='https://youtube.com/'" class="input4">YouTube</button>
+<button onclick="window.location.href='https://instagram.com/'" class="input5">Instagram</button>
+<button onclick="window.location.href='https://twitter.com/'" class="input6">Twitter</button>
+<button onclick="window.location.href='https://drive.google.com/'" class="input7">Google Drive</button>
+<button onclick="window.location.href='https://gmail.com/'" class="input8">Gmail</button>
+<br/>
+<input type="text" onkeydown="if (event.key == 'Enter') {input9.value = ''; window.location.href = input9.value;}" autocomplete="on" placeholder="Type a site and we will direct you there... (HTTPS:// NEEDED)" class="input9"/>
+</center>
+</fieldset>
+</div>
+<script>
+function InternetSearch(searchEngine, strSearch) {
+if (searchEngine == "Google") {
+if (strSearch == "") {
+window.location.href = "https://www.google.com/"
+} else {
+window.location.href = "https://www.google.com/search?q=" + strSearch;
+}
+}
+if (searchEngine == "Bing") {
+if (strSearch == "") {
+window.location.href = "https://www.bing.com/"
+} else {
+window.location.href = "https://www.bing.com/search?q=" + strSearch;
+}
+}
+}
+const input1 = document.querySelector(".input1");
+const input2 = document.querySelector(".input2");
+const input3 = document.querySelector(".input3");
+const input4 = document.querySelector(".input4");
+const input5 = document.querySelector(".input5");
+const input6 = document.querySelector(".input6");
+const input7 = document.querySelector(".input7");
+const input8 = document.querySelector(".input8");
+const input9 = document.querySelector(".input9");
+input2.addEventListener("click", function () {
+InternetSearch("Google", input1.value);
+});
+input3.addEventListener("click", function () {
+InternetSearch("Bing", input1.value);
+});
+</script>
+</body>
+</html>
