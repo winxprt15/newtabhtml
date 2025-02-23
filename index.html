@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Chrome Start Page</title>
+<title>Start Page by WinXprt</title>
 <meta charset="UTF-8"/>
 <style>
 @keyframes Op01 {
@@ -133,7 +133,7 @@ border: none;
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: green;
-transition: border-bottom-color 0.5s;
+transition: border-bottom 0.5s;
 transform: scale(135%);
 margin-top: 15px;
 color: limegreen;
@@ -262,7 +262,15 @@ to {margin-left: 25%;}
 <button onclick="window.location.href='https://drive.google.com/'" class="input7">Google Drive</button>
 <button onclick="window.location.href='https://gmail.com/'" class="input8">Gmail</button>
 <br/>
-<input type="text" onkeydown="if (event.key == 'Enter') {input9.value = ''; window.location.href = input9.value;}" autocomplete="on" placeholder="Type a site and we will direct you there... (HTTPS:// NEEDED)" class="input9"/>
+<input type="text" onkeydown="if (event.key == 'Enter') {
+if ((input9.value.indexOf('http://') == 0) || (input9.value.indexOf('https://') == 0)) {
+window.location.href = input9.value;
+input9.value = '';
+} else if (input9.value.indexOf('http') == -1) {
+window.location.href = 'https://' + input9.value;
+input9.value = '';
+}
+}" autocomplete="on" placeholder="Type a site and I will redirect you there..." class="input9"/>
 </center>
 </fieldset>
 </div>
